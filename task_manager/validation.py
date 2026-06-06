@@ -25,4 +25,6 @@ def validate_due_date(due_date):
         return True
     except ValueError:
         print("Error:Invalid date format.Please use YYYY-MM-DD.")
+        raise ValueError("Invalid date format. Please use YYYY-MM-DD.")
         return False
+        
