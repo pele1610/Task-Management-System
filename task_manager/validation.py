@@ -21,10 +21,7 @@ def validate_task_description(description):
 
 def validate_due_date(due_date):
     try: 
-        date = datetime.strptime(due_date, "%Y-%m-%d")
-        if date < datetime.now():
-            print("Error:Due date cannot be in the past.")
-            return False
+        datetime.strptime(due_date, "%Y-%m-%d")
         return True
     except ValueError:
         print("Error:Invalid date format.Please use YYYY-MM-DD.")
